@@ -154,6 +154,35 @@ def jmlr2001(
     )
 
 
+def tmlr2022(
+    *,
+    rel_width=1.0,
+    nrows=1,
+    ncols=2,
+    constrained_layout=True,
+    tight_layout=False,
+    height_to_width_ratio=_GOLDEN_RATIO,
+):
+    """TMLR figure size.
+
+    Source: https://github.com/JmlrOrg/tmlr-style-file/archive/refs/heads/main.zip
+
+    The present format is for US letter format.
+    """
+
+    figsize = _from_base_in(
+        base_width_in=6.5,  # the margins for TMLR are slightly smaller than for JMLR
+        rel_width=rel_width,
+        height_to_width_ratio=height_to_width_ratio,
+        nrows=nrows,
+        ncols=ncols,
+    )
+    return _figsize_to_output_dict(
+        figsize=figsize,
+        constrained_layout=constrained_layout,
+        tight_layout=tight_layout,
+    )
+
 def neurips2021(
     *,
     rel_width=1.0,

@@ -31,6 +31,11 @@ def jmlr2001():
     return _from_base(base=10.95)
 
 
+def tmlr2022():
+    """Font size for TMLR 2022."""
+    return _from_base(base=10)
+
+
 def beamer_moml():
     """Font size for a beamer slide in aspectratio 16:9 with 10pt font."""
     return _from_base(base=10)

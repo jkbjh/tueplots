@@ -92,6 +92,13 @@ def jmlr2001_tex(*, family="serif"):
     return _tex_computer_modern(family=family)
 
 
+def tmlr2022_tex(*, family="serif"):
+    """Fonts for TMLR2022. LaTeX version."""
+    settings = _tex_computer_modern(family=family)
+    settings["text.latex.preamble"] += r" \usepackage{lmodern}"
+    return settings
+
+
 def aistats2022_tex(*, family="serif"):
     """Fonts for AISTATS 2022. LaTeX version."""
     return _tex_computer_modern(family=family)
